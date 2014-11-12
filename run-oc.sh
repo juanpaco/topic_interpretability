@@ -17,7 +17,7 @@ oc_file="results/topics-oc.txt"
 
 #compute the word occurrences
 echo "Computing word occurrence..."
-python ComputeWordCount.py $topic_file $ref_corpus_dir > $wordcount_file
+python ComputeWordCount.py $topic_file $ref_corpus_dir 20 > $wordcount_file
 
 #compute the topic observed coherence
 echo "Computing the observed coherence..."

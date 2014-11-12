@@ -19,10 +19,11 @@ parser = argparse.ArgumentParser(description=desc)
 #####################
 parser.add_argument("topic_file", help="file that contains the topics")
 parser.add_argument("ref_corpus_dir", help="directory that contains the reference corpus")
+parser.add_argument("window_size", type=int, help="size of the sliding window; 0 = use document as windows")
 args = parser.parse_args()
 
 #parameters
-window_size = 20 #size of the sliding window; 0 = use document as window
+window_size = args.window_size
 colloc_sep = "_" #symbol for concatenating collocations
 debug = False
 
